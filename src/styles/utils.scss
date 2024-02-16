@@ -1,0 +1,7 @@
+// MEDIAS QUERIES 
+@mixin responsive($responsive-width) {
+    @media screen and (min-width:$responsive-width) {
+        @content;
+    }
+};
+
