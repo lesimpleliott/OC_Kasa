@@ -1,6 +1,7 @@
 @import "./variables.scss";
 @import "./utils.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css");
 
 * {
     box-sizing: border-box;
@@ -97,7 +98,6 @@ header {
 }
 
 .error {
-    border: solid 1px red;
     height: 70vh;
     padding-bottom: 5vh;
     display: flex;
@@ -117,6 +117,70 @@ header {
     }
     a {
         color: #000;
+    }
+}
+
+.aboutSection {
+    padding-inline: 5vw;
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include responsive($tablet) {
+        margin-block: 40px;
+        gap: 40px;
+    }
+}
+
+.menu {
+    width: 100%;
+    max-width: $desktop;
+
+    &__banner {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $mainColor;
+        color: #fff;
+        padding: 10px 10px;
+        border-radius: 5px;
+        @include responsive($tablet) {
+            padding-inline: 20px;
+        }
+
+        .fa-solid {
+            font-size: 1.3rem;
+            transform: rotate(-180deg);
+            transition: 250ms ease-in-out;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: -1;
+        background: #a2a2a2; //#fafafa;
+        margin-top: -5px;
+        padding: 20px;
+        line-height: 1.5rem;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        overflow: hidden;
+        height: 0px;
+        padding-block: 0;
+    }
+    
+
+    input[type="checkbox"] {
+        display: none;
+
+        &:checked {
+            & ~ .fa-solid {
+                transform: rotate(0);
+            }
+        }
     }
 }
 
