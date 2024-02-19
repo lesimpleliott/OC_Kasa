@@ -1,19 +1,17 @@
 import PropTypes from "prop-types";
 
-const Banner = (props) => {
+const Banner = ({ image, text }) => {
     return (
         <section className="heroBanner">
-            <img src={props.bannerData.img} alt="image hero banner" />
-            <p>{props.bannerData.text}</p>
+            <img src={image} alt="image hero banner" />
+            <p>{text}</p>
         </section>
     );
 };
 
 Banner.propTypes = {
-    bannerData: PropTypes.shape({
-        img: PropTypes.string.isRequired,
-        text: PropTypes.string,
-    }).isRequired
+    image: PropTypes.string.isRequired,
+    text: PropTypes.string,
 };
 
 export default Banner;

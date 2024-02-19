@@ -1,0 +1,26 @@
+footer {
+    width: 100%;
+    padding-block: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    @include responsive($tablet) {
+        padding-bottom: 35px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .legal {
+        margin-top: 15px;
+        color: #fff;
+        font-size: 0.7rem;
+        @include responsive($tablet) {
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+    }
+}

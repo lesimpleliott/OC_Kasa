@@ -1,0 +1,22 @@
+.error {
+    height: 70vh;
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    h1 {
+        font-size: clamp(6rem, 35vw, 18rem);
+        color: $mainColor;
+    }
+    p {
+        padding-inline: 5vw;
+        text-align: center;
+        color: $mainColor;
+        font-size: clamp(1rem, 5vw, 2.2rem);
+    }
+    a {
+        color: #000;
+    }
+}

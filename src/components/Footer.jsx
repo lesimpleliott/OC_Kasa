@@ -1,8 +1,10 @@
+import Logo from "./Logo";
+
 const Footer = () => {
     return (
         <footer>
-            <img src="./kasa-logo.white.svg" alt="Logo Kasa" />
-            <p>© 2020 Kasa. All rights reserved</p>
+            <Logo color="#fff" />
+            <p className="legal">© 2020 Kasa. All rights reserved</p>
         </footer>
     );
 };

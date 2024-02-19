@@ -1,0 +1,42 @@
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css");
+
+// VARIABLES
+$mainColor: #ff6060;
+$sectionColor: #c0c0c0; //#fafafa
+$tablet: 768px;
+$desktop: 1024px;
+
+// MIXINS
+@mixin responsive($responsive-width) {
+    @media screen and (min-width: $responsive-width) {
+        @content;
+    }
+}
+
+// COMPONENTS
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/banner.scss";
+@import "./components/dropdownMenu.scss";
+
+// PAGES
+@import "./pages/home.scss";
+@import "./pages/about.scss";
+@import "./pages/error.scss";
+
+
+
+// ******************************************************
+// ******************************************************
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}

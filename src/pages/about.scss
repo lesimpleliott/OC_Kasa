@@ -1,0 +1,13 @@
+.aboutSection {
+    padding-inline: 5vw;
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include responsive($tablet) {
+        margin-block: 40px;
+        gap: 40px;
+    }
+}

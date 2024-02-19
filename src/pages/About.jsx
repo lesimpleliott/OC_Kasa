@@ -1,29 +1,19 @@
-import Banner from "../components/Banner";
-import CollapseMenu from "../components/CollapseMenu";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
-
-const bannerData = {
-    img: "src/assets/aboutImage.jpg",
-};
-
+import Banner from "../components/Banner";
+import DropdownMenu from "../components/DropdownMenu";
+import Footer from "../components/Footer";
 import dataAbout from "../data/about.json";
 
+
 const About = () => {
-
-
     return (
         <div>
             <Header />
-            <Banner bannerData={bannerData} />
+            <Banner image="src/assets/aboutImage.jpg" />
 
             <section className="aboutSection">
                 {dataAbout.map((item) => (
-                    <CollapseMenu
-                        key={item.id}
-                        title={item.title}
-                        description={item.description}
-                    />
+                    <DropdownMenu key={item.id} item={item} />
                 ))}
             </section>
 
