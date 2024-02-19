@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Card = ( {data} ) => {
     return (
-        <div className="card" key={data.id}>
+        <Link className="card" key={data.id} to={`/host/${data.id}`}>
             <img src={data.cover} alt="" />
             <h3>{data.title}</h3>
-        </div>
+        </Link>
     );
 };
 

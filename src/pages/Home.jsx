@@ -15,13 +15,10 @@ const Home = () => {
                     image="src/assets/homeImage.jpg"
                     text="Chez vous, partout et ailleurs"
                 />
-
                 <section className="cards">
-
                     {dataHosts.map((host) => (
                         <Card key={host.id} data={host}/>
                     ))}
-
                 </section>
             </main>
 
