@@ -1,31 +1,27 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const DropdownMenu = ({ item }) => {
+const DropdownMenu = ({ title, children }) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
 
     const toggleMenu = () => {
-        setMenuIsOpen((prevMenuIsOpen) => !prevMenuIsOpen);
+        setMenuIsOpen(!menuIsOpen);
     };
 
     return (
-        <div className="menu">
-            <div className="menu__banner" onClick={toggleMenu}>
-                <h3>{item.title}</h3>
-                <i className={`fa-solid fa-chevron-down ${menuIsOpen ? 'open' : ''}`}></i>
+        <div className="dropdown">
+            <div className="banner" onClick={toggleMenu}>
+                <h2>{title}</h2>
+                <i className={`fa-solid fa-chevron-up ${menuIsOpen ? 'open' : ''}`} />
             </div>
-            <div className={`menu__content ${menuIsOpen ? 'open' : ''}`}>
-                <p>{item.description}</p>
-            </div>
+            <div className={`content ${menuIsOpen ? 'open' : '' }`}>{children}</div>
         </div>
     );
 };
 
 DropdownMenu.propTypes = {
-    item: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-    }).isRequired,
+    title: PropTypes.string.isRequired,
+    children: PropTypes.string.isRequired,
 };
 
 export default DropdownMenu;

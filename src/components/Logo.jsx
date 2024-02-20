@@ -1,9 +1,11 @@
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const Logo = ({ color }) => {
+const Logo = ({ color = "#000" }) => {
     return (
+        <NavLink to="/">
             <svg
-                className="logo"
+                className="kasaLogo"
                 viewBox="0 0 211 68"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +31,7 @@ const Logo = ({ color }) => {
                     fill={color}
                 />
             </svg>
+        </NavLink>
     );
 };
 

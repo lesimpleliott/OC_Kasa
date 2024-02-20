@@ -1,0 +1,39 @@
+header {
+    padding-inline: 5vw;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include responsive($tablet) {
+        margin-top: 45px;
+        margin-bottom: 50px;
+    }
+
+    .kasaLogo {
+        width: 145px;
+        @include responsive($tablet) {
+            width: 210px;
+        }
+    }
+
+    .navbar {
+        ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        a {
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            &.active {
+                text-decoration: underline;
+            }
+
+            @include responsive($tablet) {
+                font-size: 24px;
+            }
+        }
+    }
+}

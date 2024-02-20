@@ -1,0 +1,70 @@
+.dropdown {
+    width: 100%;
+    max-width: $desktop;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .banner {
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $mainColor;
+        border-radius: 5px;
+        color: #fff;
+        @include responsive($tablet) {
+            height: 50px;
+            padding-inline: 20px;
+        }
+
+        h2 {
+            font-size: 13px;
+            @include responsive($tablet) {
+                font-size: 24px;
+            }
+        }
+
+        .fa-solid {
+            font-size: 18px;
+            transform: rotate(0);
+            transition: transform 250ms ease-in-out;
+            @include responsive($tablet) {
+                font-size: 22px;
+            }
+            
+            &.open {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .content {
+        max-height: 0;
+        padding: 0 20px;
+        margin-top: -5px;
+        position: relative;
+        z-index: -1;
+        background: $sectionColor;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 18px;
+        transition: all 300ms ease-in-out;
+        overflow: hidden;
+        @include responsive($tablet) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        &.open {
+            max-height: 9999px;
+            padding: 20px;
+        }
+
+
+    }
+}
