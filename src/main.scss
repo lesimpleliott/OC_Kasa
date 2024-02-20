@@ -21,11 +21,14 @@ $desktop: 1024px;
 @import "./components/banner.scss";
 @import "./components/dropdownMenu.scss";
 @import "./components/card.scss";
+@import "./components/carousel.scss";
+@import "./components/rating.scss";
 
 // PAGES
 @import "./pages/home.scss";
 @import "./pages/about.scss";
 @import "./pages/error.scss";
+@import "./pages/host.scss";
 
 // ******************************************************
 // ******************************************************

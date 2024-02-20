@@ -4,7 +4,9 @@ import Logo from "./Logo";
 const Header = () => {
     return (
         <header>
-            <Logo color="#ff6060" />
+            <NavLink to="/" className="logoLink">
+                <Logo color="#ff6060" />
+            </NavLink>
             <ul>
                 <NavLink to="/" >
                     <li>Accueil</li>
