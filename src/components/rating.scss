@@ -4,4 +4,8 @@
     gap: 5px;
     font-size: 1.2rem;
     color: #E3E3E3;
+    @include responsive ($tablet) {
+        font-size: 1.6rem;
+        gap: 10px;
+    }
 }
