@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import DropdownMenu from "../components/DropdownMenu";
@@ -7,18 +7,25 @@ import { useContext, useEffect, useState } from "react";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
 
+
 const Host = () => {
     const { id } = useParams(); // récupère l'id présent dans l'URL
     const dataHosts = useContext(BaseDataContext); // import des dataHosts (base.json)
     const [hostData, setHostData] = useState(null); // initialise avec null
+    const navigate = useNavigate();
 
-    // on récupère la data (hostData) dont l'id correspond à l'id de l'URL
     useEffect(() => {
         const selectedHost = dataHosts.find((host) => host.id === id);
-        setHostData(selectedHost);
-    }, [id, dataHosts]);
+        if (!selectedHost) {
+            navigate("/error"); // Redirige vers la page d'erreur si aucun hôte correspondant n'est trouvé
+        } else {
+            setHostData(selectedHost);
+        }
+    }, [id, dataHosts, navigate]);
 
-    console.log(hostData);
+    if (!hostData) {
+        return null; 
+    }
 
     return (
         <div>
