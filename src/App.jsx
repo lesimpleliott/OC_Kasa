@@ -5,17 +5,23 @@ import About from "./pages/About";
 import Host from "./pages/Host";
 import Error from "./pages/Error";
 
+import BaseDataContext from "./hooks/BaseDataContext";
+import baseData from "./assets/base.json";
+
 const App = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/about" element={<About />}></Route>
-                <Route path="/host" element={<Host />}></Route>
-                <Route path="/host/:id" element={<Host />}></Route>
-                <Route path="*" element={<Error />}></Route>
-            </Routes>
-        </BrowserRouter>
+        // Provider enveloppe tous les components ? 
+        <BaseDataContext.Provider value={baseData}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/host/:id" element={<Host />} />
+                    <Route path="/host" element={<Host />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<Error />} />
+                </Routes>
+            </BrowserRouter>
+        </BaseDataContext.Provider>
     );
 };
 

@@ -3,9 +3,13 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeroBanner from "../components/HeroBanner";
 
-import dataHosts from "../assets/base.json";
+import BaseDataContext from "../hooks/BaseDataContext";
+import { useContext } from "react";
 
 const Home = () => {
+
+    const dataHosts = useContext(BaseDataContext)
+
     return (
         <div>
             <Header />

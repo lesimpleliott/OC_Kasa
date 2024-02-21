@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom"
 import PropTypes from 'prop-types';
 
-
 const Card = ({data}) => {
-
-
-
     return (
         <Link className="card" to={`/host/${data.id}`}>
             <h2>{data.title}</h2>
