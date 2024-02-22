@@ -1,8 +1,29 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex: 1;
+        padding-inline: 5vw;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        @include responsive($tablet) {
+            margin-bottom: 50px;
+            gap: 40px;
+        }
+    }
 }
 
 a {
@@ -10,16 +31,6 @@ a {
     color: inherit;
 }
 
-main {
-    padding-inline: 5vw;
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    @include responsive($tablet) {
-        margin-bottom: 50px;
-        gap: 40px;
-    }
+li {
+    list-style: none;
 }
-

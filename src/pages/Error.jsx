@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Error = () => {
     return (
-        <div>
+        <div className="app">
             <Header />
             <main>
                 <div className="error">

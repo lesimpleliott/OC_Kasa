@@ -42,21 +42,20 @@
     }
 
     .content {
+        position: relative;
+        z-index: -1;
+        top: -5px;
         width: 100%;
         max-height: 0;
         padding-block: 0;
         padding-inline: 20px;
-        margin-top: -5px;
-        position: relative;
-        z-index: -1;
         background: $sectionColor;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         overflow: hidden;
         font-size: 12px;
         line-height: 18px;
-
-        transition: max-height 300ms ease-in-out, padding 500ms ease-in-out;
+        transition: max-height 300ms , padding 800ms;
         
         @include responsive($tablet) {
             font-size: 18px;

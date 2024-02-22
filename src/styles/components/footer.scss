@@ -20,6 +20,7 @@ footer {
         @include responsive($tablet) {
             display: flex;
             justify-content: center;
+            gap: 8px;
             width: 100%;
             font-size: 24px;
             margin-top: 30px;

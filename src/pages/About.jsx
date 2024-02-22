@@ -5,7 +5,7 @@ import HeroBanner from "../components/HeroBanner";
 
 const About = () => {
     return (
-        <div>
+        <div className="app">
             <Header />
             <main>
                 <HeroBanner img="./aboutImage.jpg" />

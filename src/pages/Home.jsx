@@ -11,7 +11,7 @@ const Home = () => {
     const dataHosts = useContext(BaseDataContext)
 
     return (
-        <div>
+        <div className="app">
             <Header />
             <main>
                 <HeroBanner

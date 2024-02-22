@@ -1,11 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import DropdownMenu from "../components/DropdownMenu";
-import BaseDataContext from "../hooks/BaseDataContext";
 import { useContext, useEffect, useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import DropdownMenu from "../components/DropdownMenu";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
+import BaseDataContext from "../hooks/BaseDataContext";
 
 
 const Host = () => {
@@ -28,7 +28,7 @@ const Host = () => {
     }
 
     return (
-        <div>
+        <div className="app">
             <Header />
             {hostData && (
                 <main className="hostMain">
