@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import DropdownMenu from "../components/DropdownMenu";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
-import BaseDataContext from "../hooks/BaseDataContext";
+import BaseDataContext from "../context/BaseDataContext";
 
 
 const Host = () => {

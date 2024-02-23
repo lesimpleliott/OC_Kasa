@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Host from "./pages/Host";
 import Error from "./pages/Error";
 
-import BaseDataContext from "./hooks/BaseDataContext";
+import BaseDataContext from "./context/BaseDataContext";
 import baseData from "./assets/base.json";
 
 const App = () => {

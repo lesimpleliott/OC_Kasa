@@ -18,4 +18,5 @@ Card.propTypes = {
     }).isRequired,
 }
 
+
 export default Card;
