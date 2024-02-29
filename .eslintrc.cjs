@@ -12,6 +12,7 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    'no-console' : "warn", // UTILISATION DES CONSOLE.LOG : Warning 
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',

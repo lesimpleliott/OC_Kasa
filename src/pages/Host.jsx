@@ -6,7 +6,7 @@ import DropdownMenu from "../components/DropdownMenu";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
 import BaseDataContext from "../context/BaseDataContext";
-
+import Tag from "../components/Tag";
 
 const Host = () => {
     const { id } = useParams(); // récupère l'id présent dans l'URL
@@ -24,7 +24,7 @@ const Host = () => {
     }, [id, dataHosts, navigate]);
 
     if (!hostData) {
-        return null; 
+        return null;
     }
 
     return (
@@ -39,13 +39,9 @@ const Host = () => {
                             <h1>{hostData.title}</h1>
                             <p className="location">{hostData.location}</p>
                             <div className="tags">
-                                {hostData.tags.map((tag, index) => {
-                                    return (
-                                        <p key={index} className="tag">
-                                            {tag}
-                                        </p>
-                                    );
-                                })}
+                                {hostData.tags.map((tag, index) => (
+                                    <Tag key={index} tag={tag} />
+                                ))}
                             </div>
                         </div>
 

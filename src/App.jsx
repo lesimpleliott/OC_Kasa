@@ -10,7 +10,6 @@ import baseData from "./assets/base.json";
 
 const App = () => {
     return (
-        // Provider enveloppe tous les components ? 
         <BaseDataContext.Provider value={baseData}>
             <BrowserRouter>
                 <Routes>
