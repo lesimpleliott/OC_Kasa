@@ -1,4 +1,6 @@
 header {
+    width: 100%;
+    max-width: calc($desktopPlus + 10vw);
     padding-inline: 5vw;
     margin-top: 20px;
     margin-bottom: 25px;
