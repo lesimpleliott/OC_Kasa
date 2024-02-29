@@ -7,17 +7,16 @@ import BaseDataContext from "../context/BaseDataContext";
 import { useContext } from "react";
 
 const Home = () => {
-
-    const dataHosts = useContext(BaseDataContext)
+    const dataHosts = useContext(BaseDataContext);
 
     return (
         <div className="app">
             <Header />
             <main>
-                <HeroBanner
-                    title="Chez vous, partout et ailleurs"
-                    img="./homeImage.jpg"
-                />
+                <HeroBanner img="./homeImage.jpg">
+                    <h1>Chez vous, partout et ailleurs</h1>
+                </HeroBanner>
+
                 <section className="cards">
                     {dataHosts.map((host) => (
                         <Card key={host.id} data={host} />

@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 
-const HeroBanner = ({ title, img }) => {
+const HeroBanner = ({ img, children }) => {
     return <section className="heroBanner">
         <img src={img} />
-        <h1>{title}</h1>
+        {children}
     </section>;
 };
 
 HeroBanner.propTypes = {
-    title: PropTypes.string,
     img: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default HeroBanner;
