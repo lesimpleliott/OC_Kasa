@@ -8,4 +8,5 @@ Créez une application web de location immobilière avec React
 - Exécutez npm run dev pour lancer le projet en local
 
 # PREVIEW 
-https://elegarage-kasa.netlify.app/
+
+Vercel [Preview](https://oc-kasa-sable.vercel.app/)
